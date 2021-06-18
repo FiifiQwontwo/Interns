@@ -20,7 +20,7 @@ class Languages(models.Model):
             self.slug = slugify(rand_slug() + "-" + self.language_name)
         super(Languages, self).save(*args, **kwargs)
 
-    def save(self, *args, **kwargs):
+    def __str__(self, *args, **kwargs):
         return self.language_name
 
 
@@ -55,7 +55,7 @@ class Internship(models.Model):
     first_name = models.CharField(max_length=100)
     middle_name = models.CharField(max_length=100, blank=True)
     last_name = models.CharField(max_length=100)
-    dob = models.DateField()
+    dob = models.DateField(blank=True)
     phone_number = models.CharField(max_length=20)
     email_address = models.EmailField(unique=True, max_length=254)
     name_of_school = models.ForeignKey(SchoolName, on_delete=models.CASCADE)

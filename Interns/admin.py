@@ -22,6 +22,6 @@ class InternshipAdmin(admin.ModelAdmin):
 
 admin.site.register(Internship, InternshipAdmin)
 admin.site.register(SchoolName, SchoolNameAdmin)
-admin.site.register(FrameworksAdmin, Frameworks)
+admin.site.register(Frameworks, FrameworksAdmin)
 admin.site.register(Languages, AdminLanguages)
 
